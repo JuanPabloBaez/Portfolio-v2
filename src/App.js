@@ -8,8 +8,8 @@ import Nav from './Components/nav.js';
 import Home from './Components/home.js';
 import Video from './Components/video.js';
 import Web from './Components/web.js';
-import Gallery from './Components/gallery.js'
-import Board from './Components/board.js'
+import Gallery from './Components/gallery.js';
+import Board from './Components/board.js';
 import './App.css';
 
 function App() {
