@@ -1,0 +1,13 @@
+.video-body {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.video-body p {
+    margin: 0 auto;  
+}
+
+

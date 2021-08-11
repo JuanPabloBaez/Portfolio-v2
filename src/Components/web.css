@@ -1,0 +1,11 @@
+.web-body {
+    height: 80vh;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10%;
+    text-align: left;
+    
+}
+.web-body p{
+    margin: 2% 0;
+}
