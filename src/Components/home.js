@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import videoHome from '../images/title_2.mp4';
 import Contact from './contact-form';
 import inLogo from '../images/linkedin_icon.svg';
@@ -9,16 +9,32 @@ import githubLogo from '../images/github_icon.svg'
 import './home.css';
 
 const Home = () => {
+    const [onTop, setOntop] = useState(true);
+    const bodyEndRef = useRef(null);
+    const bodyStartRef = useRef(null);
 
-    const bodyEndRef = useRef(null)
+    
 
-    const scrollToBottom = () => {
-    bodyEndRef.current.scrollIntoView({ behavior: "smooth" })
-  }
+
+    
+        const scrollToBottom = (e) => {
+            bodyEndRef.current.scrollIntoView({ behavior: "smooth" });
+            setOntop(false);
+            return
+          }
+   
+        
+         const scrollToTop = () => {
+            window.scroll(0,0);            
+            setOntop(true);
+            return
+          } 
+  
+  
 
 
     return(
-        <div className="home-body" >
+        <div className="home-body"  >
             <div className="hello">   
                 <video id="background-video" loop autoPlay muted >
                     <source src={videoHome} type="video/mp4" />    
@@ -28,7 +44,7 @@ const Home = () => {
 
 
             <div className="contact" ref={bodyEndRef}>
-                <button onClick={scrollToBottom} >Contact</button>
+                <button onClick={onTop===true ? scrollToBottom : scrollToTop}>{onTop===true ? "Contact": "To top"}</button>
                 <Contact/>
                 <div className="social">
                     <p>also in</p>
