@@ -1,14 +1,17 @@
 import {Link} from "react-router-dom";
+import Logo from '../images/logo110x100_jp.png'
+import './nav.css'
 
 const Nav = () => {
     return(
         <div className="nav-bar">    
-            <Link to="/" className="logo">Portfolio</Link>
+            
             <div className="link-panel">
-                <Link to="/video">video </Link>
-                <Link to="/web">web </Link>
-                <Link to="/gallery">gallery </Link>
-                <Link to="/board">board </Link>
+                <Link to="/video" className="nav-button">video </Link>
+                <Link to="/web" className="nav-button">web </Link>
+                <Link to="/" className="logo"><img src={Logo} alt="logo" /></Link>
+                <Link to="/gallery" className="nav-button">gallery </Link>
+                <Link to="/board" className="nav-button">board </Link>
                 
             </div>
         </div>

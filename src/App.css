@@ -2,3 +2,13 @@
   text-align: center;
 }
 
+footer {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5% 3%;
+  font-size: 1.1em;
+  flex-wrap: nowrap;
+ 
+}
