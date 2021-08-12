@@ -9,7 +9,7 @@
     max-width: 600px;
     height: inherit;
     margin: 0 auto;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
     gap: 2%;
     
