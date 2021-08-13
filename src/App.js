@@ -37,7 +37,6 @@ function App() {
         </Switch>
         <footer>
         <p>&copy; Juan Pablo Baez {new Date().getFullYear()}</p>      
-        <p>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
       </footer>
       </Router>
     </div>

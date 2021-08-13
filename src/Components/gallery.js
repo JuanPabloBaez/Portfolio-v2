@@ -25,37 +25,30 @@ const Gallery = () => {
         return
       }
     }
-   console.log(slidePhotos)
+   
 
     return( 
         <div className="gallery-body" >
           <button onClick={handleGallery} >{slidePhotos===collages ? "to Photography": "to Collages"}</button>
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={(swiper) => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-      navigation
-      loop={true}
-    >
-    
-      {
-        slidePhotos && slidePhotos.map((photo, index )=> {
-          return (
-          <SwiperSlide>
-            <img className="slide-photo" src={photo.default} key={index} alt={`gallery photo${photo}`}  />
-          </SwiperSlide>
-          )
-       })      
-      }
-
-    
-      
-    </Swiper>
-
-            
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            onSlideChange={(swiper) => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            navigation
+            loop={true}
+          >
+          {
+            slidePhotos && slidePhotos.map((photo, index )=> {
+              return (
+              <SwiperSlide>
+                <img className="slide-photo" src={photo.default} key={index} alt={`gallery photo${photo}`}  />
+              </SwiperSlide>
+              )
+            })      
+          }  
+          </Swiper>
         </div>
-        
     )
 }
 

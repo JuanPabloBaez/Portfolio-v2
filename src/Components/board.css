@@ -1,0 +1,58 @@
+.board-body{
+    min-height: 80vh;
+    max-height: 100vh;
+    overflow: scroll;
+    
+}
+
+h1 {
+    margin-top: 3vh;
+    text-align: right;
+    margin-right: 15vw; 
+}
+
+.post-container {
+    height: auto;
+    min-height: 30vh;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: justify;
+
+}
+.post-main {
+    display: flex;
+    text-align: left;
+    margin-bottom: 2%;
+    
+}
+
+.post-main img {
+    height: 30vh;
+    
+}
+.post-main-text{
+    display: flex;
+    flex-direction: column;
+}
+.post-main-text h2 {
+    margin: 2% 5%;
+}
+.post-main-text span {
+    display: flex;
+    gap: 2%;
+    margin: 0 0 1% 4%;
+}
+
+.post-main-content{
+    margin: auto auto 5% 2%;
+}
+
+.board-photo {
+    object-fit: contain;
+    width: 60%;
+    
+}
+.post-main-content-2 {
+    margin-top: 3%;
+}
