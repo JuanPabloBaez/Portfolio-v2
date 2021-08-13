@@ -16,3 +16,33 @@ footer {
   
  
 }
+
+@media (max-width: 550px) {
+
+  .hello {
+    position: relative;
+    padding-top: 2%;
+  }
+  #background-video {
+    width: 90%;
+    height: 95%;
+    object-fit: cover;
+    opacity: 0.25;
+    
+    border-radius: 6px;
+  }  
+  .greet {
+    position: absolute;
+    top: 30%;
+    padding: 0 5%;
+    height: 100%;
+  }
+
+  .post-main {
+    flex-direction: column;
+  }
+
+
+
+}
+

@@ -29,6 +29,7 @@ h1 {
 
 .post-main img {
     height: 30vh;
+    object-fit: contain;
     
 }
 .post-main-text{
