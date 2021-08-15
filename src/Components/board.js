@@ -1,5 +1,9 @@
 import React, {useState, useEffect}  from 'react';
 import axios from 'axios';
+
+import ReactPlayer from 'react-player';
+import ReactMarkdown from 'react-markdown';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import './board.css';
@@ -11,7 +15,7 @@ const Board = () => {
 
     useEffect(()=>{
         function  getPosts () {
-            axios.get('http://localhost:1337/board-posts')
+            axios.get('http://localhost:1337/post-lists')
             .then(response => {
              setPosts(response.data);
              return
@@ -36,7 +40,7 @@ const Board = () => {
                             <div className="post-main">
                                 {post.main_picture && <img src={"http://localhost:1337" + post.main_picture.url} alt={post.title}/>}
                                 <div className="post-main-text">
-                                    <h2>{post.title}</h2>
+                                    <ReactMarkdown className="board-post-title">{post.title}</ReactMarkdown>
                                     <span>
                                         <p>{post.date} </p>
                                         {(function() {
@@ -49,15 +53,17 @@ const Board = () => {
                                             }
                                         })()}
                                     </span>
-                                    <p className="post-main-content">{post.main_content_1}</p>
+                                    <ReactMarkdown className="post-main-content">{post.main_content_1}</ReactMarkdown>
                                 </div>
-                                
-                                
-
                             </div>
-                           { post.media[0] && <Swiper
+
+                            {post.video_link && <ReactPlayer url={post.video_link} className="board-player" width="100%" />}
+                            <ReactMarkdown className="post-main-content-2">{post.main_content_2}</ReactMarkdown>
+                            {post.media[0] && <Swiper
                                 spaceBetween={50}
                                 slidesPerView={1}
+                                height="100%"
+                                
                                 onSlideChange={(swiper) => console.log('slide change')}
                                 onSwiper={(swiper) => console.log(swiper)}
                                 navigation
@@ -73,11 +79,7 @@ const Board = () => {
                                 })      
                             }  
                             </Swiper> } 
-
-                            <p className="post-main-content-2">{post.main_content_2}</p>
-                            
                             {console.log(post)}
-                            
                         </div>
                     )
                 }).reverse()

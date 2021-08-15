@@ -39,7 +39,7 @@ const Home = () => {
                 <video id="background-video" loop autoPlay muted >
                     <source src={videoHome} type="video/mp4" />    
                 </video>
-                <p className="greet">Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot! Well, I didn't vote for you. On second thoughts, let's not go there. It is a silly place.</p>
+                <p className="greet">I'm Juan Pablo, video producer and web developer, I also run beatkino.com. On this site you can find a diverse selection of the work I've done through the years. I'm currently based in Berlin.  </p>
             </div>
 
 

@@ -14,7 +14,8 @@ h1 {
 .post-container {
     height: auto;
     min-height: 30vh;
-    margin: 5% auto;
+    margin: 0 auto;
+    margin-bottom: 8%;
     width: 90%;
     max-width: 800px;
     text-align: justify;
@@ -22,9 +23,7 @@ h1 {
 }
 .post-main {
     display: flex;
-    text-align: left;
-    margin-bottom: 2%;
-    
+    text-align: left;   
 }
 
 .post-main img {
@@ -36,7 +35,8 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-.post-main-text h2 {
+.board-post-title {
+    font-size: 1.5em;
     margin: 2% 5%;
 }
 .post-main-text span {
@@ -48,12 +48,36 @@ h1 {
 .post-main-content{
     margin: auto auto 5% 2%;
 }
+.post-main-content-2 {
+    margin: 5% auto;
+}
+
+.swiper-container {
+    height: 80%;
+    display: block;
+    width: 90%;
+}    
+
+.swiper-wraper {
+    height: 100%;
+    
+}
 
 .board-photo {
     object-fit: contain;
-    width: 60%;
+    height: 100%;
+    width: 90%;
+    max-width: 600px;
+    
     
 }
 .post-main-content-2 {
     margin-top: 3%;
+}
+
+.board-player {
+    margin: 2% auto;
+    width: 95%;
+    max-width: 600px;
+
 }

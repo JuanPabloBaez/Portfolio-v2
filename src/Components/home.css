@@ -14,6 +14,8 @@
 .greet{
     font-size: 1.8em;
     max-width: 900px;
+    text-align: justify;
+    padding: 2%;
 }
 
 
