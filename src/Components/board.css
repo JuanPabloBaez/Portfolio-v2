@@ -2,23 +2,32 @@
     min-height: 80vh;
     max-height: 100vh;
     overflow: scroll;
-    
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 h1 {
-    margin-top: 3vh;
+    margin: 3vh 18vw;
     text-align: right;
-    margin-right: 15vw; 
+    font-weight: 400;
+    font-size: 2.6em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(103, 103, 103);
 }
 
 .post-container {
     height: auto;
-    min-height: 30vh;
+    min-height: 20vh;
     margin: 0 auto;
     margin-bottom: 8%;
     width: 90%;
     max-width: 800px;
     text-align: justify;
+    
 
 }
 .post-main {
@@ -34,21 +43,23 @@ h1 {
 .post-main-text{
     display: flex;
     flex-direction: column;
+    
 }
 .board-post-title {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin: 2% 5%;
 }
 .post-main-text span {
     display: flex;
     gap: 2%;
     margin: 0 0 1% 4%;
+    
 }
 
 .post-main-content{
     margin: auto auto 5% 2%;
 }
-.post-main-content-2 {
+.post-main-content2 {
     margin: 5% auto;
 }
 
@@ -56,11 +67,11 @@ h1 {
     height: 80%;
     display: block;
     width: 90%;
+    margin-top: 5%;
 }    
 
 .swiper-wraper {
     height: 100%;
-    
 }
 
 .board-photo {
@@ -68,8 +79,6 @@ h1 {
     height: 100%;
     width: 90%;
     max-width: 600px;
-    
-    
 }
 .post-main-content-2 {
     margin-top: 3%;

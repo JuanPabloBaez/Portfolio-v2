@@ -3,6 +3,7 @@ import {client} from './client.js';
 
 import ReactPlayer from 'react-player';
 import RichText from '@madebyconnor/rich-text-to-jsx';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -36,17 +37,25 @@ const Board = () => {
             <h1>Board</h1>
             {
                 posts.map((post, index)=> {
-                    
-                    console.log(post)
 
                     return(
                         <div className="post-container" key={index}>
                             <div className="post-main">
                                 {post.fields.mainPicture && <img src={post.fields.mainPicture.fields.file.url} alt={post.fields.title}/>}
                                 <div className="post-main-text">
-                                    <RichText className="board-post-title" richText={post.fields.title}/>
+                                    <RichText
+                                        richText={post.fields.title}
+                                        overrides={{
+                                            [BLOCKS.PARAGRAPH]: {
+                                              component: "h2",
+                                              props: {
+                                                className: 'board-post-title'
+                                              }
+                                            }
+                                          }}
+                                     />
                                     <span>
-                                        <p>{post.fields.date} </p>
+                                        <p className="post-date">{post.fields.date} </p>
                                         {(function() {
                                             if ( post.fields.place && post.fields.placeLink  ) {
                                                 return <a className="post-place" href={post.fields.placeLink} target="_blank" rel="noreferrer">on {post.fields.place} </a>;  
@@ -57,15 +66,35 @@ const Board = () => {
                                             }
                                         })()}
                                     </span>
-                                    <RichText className="post-main-content" richText={post.fields.mainContent1}/>
+                                    <RichText 
+                                        richText={post.fields.mainContent1}
+                                        overrides={{
+                                            [BLOCKS.PARAGRAPH]: {
+                                              component: "p",
+                                              props: {
+                                                className: 'post-main-content'
+                                              }
+                                            }
+                                          }}
+                                    />
                                 </div>
                             </div>
 
-                           {post.fields.videoLink && <ReactPlayer url={post.fields.videoLink} className="board-player" width="100%" />}
+                            {post.fields.videoLink && <ReactPlayer url={post.fields.videoLink} className="board-player" width="100%" />}
                            
-                        {post.fields.mainContent2 &&  <RichText className="post-main-content2" richText={post.fields.mainContent2}/>}
+                            {post.fields.mainContent2 &&  <RichText 
+                                                            richText={post.fields.mainContent2}
+                                                            overrides={{
+                                                                [BLOCKS.PARAGRAPH]: {
+                                                                component: "p",
+                                                                props: {
+                                                                    className: 'post-main-content2'
+                                                                }
+                                                                }
+                                                            }}
+                            />}
                            
-                                 {post.fields.media && <Swiper
+                            {post.fields.media && <Swiper
                                 spaceBetween={50}
                                 slidesPerView={1}
                                 height="100%"
@@ -78,8 +107,8 @@ const Board = () => {
                             {
                                 post.fields.media.map((photo, index )=> {
                                 return (
-                                <SwiperSlide>
-                                    <img className="board-photo" src={photo.fields.file.url} key={index} alt="post related"  />
+                                <SwiperSlide key={index}>
+                                    <img className="board-photo" src={photo.fields.file.url}  alt="post related"  />
                                 </SwiperSlide>
                                 )
                                 })      
@@ -88,7 +117,7 @@ const Board = () => {
                             
                         </div>
                     )
-                })/* .reverse() */
+                })
             }
         </div>
     )
