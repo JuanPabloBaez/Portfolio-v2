@@ -1,8 +1,8 @@
 import React, {useState, useEffect}  from 'react';
-import axios from 'axios';
+import {client} from './client.js';
 
 import ReactPlayer from 'react-player';
-import ReactMarkdown from 'react-markdown';
+import RichText from '@madebyconnor/rich-text-to-jsx';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -12,17 +12,21 @@ SwiperCore.use([Navigation]);
 
 const Board = () => {
     const [posts, setPosts] = useState([]);
-
+    
     useEffect(()=>{
-        function  getPosts () {
-            axios.get('http://localhost:1337/post-lists')
-            .then(response => {
-             setPosts(response.data);
-             return
-           });
-        };
+       async function  getPosts () {
+        try{
+            client.getEntries()
+            .then((response)=> {
+                setPosts(response.items);
+                return
+            })
+          }catch(error){
+            console.log('fatal error')
+          }
+        }; 
         getPosts();
-    },[])
+    },[client])
   
    
      
@@ -33,33 +37,35 @@ const Board = () => {
             {
                 posts.map((post, index)=> {
                     
-
+                    console.log(post)
 
                     return(
                         <div className="post-container" key={index}>
                             <div className="post-main">
-                                {post.main_picture && <img src={"http://localhost:1337" + post.main_picture.url} alt={post.title}/>}
+                                {post.fields.mainPicture && <img src={post.fields.mainPicture.fields.file.url} alt={post.fields.title}/>}
                                 <div className="post-main-text">
-                                    <ReactMarkdown className="board-post-title">{post.title}</ReactMarkdown>
+                                    <RichText className="board-post-title" richText={post.fields.title}/>
                                     <span>
-                                        <p>{post.date} </p>
+                                        <p>{post.fields.date} </p>
                                         {(function() {
-                                            if ( post.place && post.place_link !=="null" ) {
-                                                return <a className="post-place" href={post.place_link} target="_blank" rel="noreferrer">on {post.place} </a>;  
-                                            } if (post.place ==="") {
+                                            if ( post.fields.place && post.fields.placeLink  ) {
+                                                return <a className="post-place" href={post.fields.placeLink} target="_blank" rel="noreferrer">on {post.fields.place} </a>;  
+                                            } if (post.fields.place ==="") {
                                                 return null
                                             } else {
-                                                return <p className="post-place"> {post.place}</p>;
+                                                return <p className="post-place"> {post.fields.place}</p>;
                                             }
                                         })()}
                                     </span>
-                                    <ReactMarkdown className="post-main-content">{post.main_content_1}</ReactMarkdown>
+                                    <RichText className="post-main-content" richText={post.fields.mainContent1}/>
                                 </div>
                             </div>
 
-                            {post.video_link && <ReactPlayer url={post.video_link} className="board-player" width="100%" />}
-                            <ReactMarkdown className="post-main-content-2">{post.main_content_2}</ReactMarkdown>
-                            {post.media[0] && <Swiper
+                           {post.fields.videoLink && <ReactPlayer url={post.fields.videoLink} className="board-player" width="100%" />}
+                           
+                        {post.fields.mainContent2 &&  <RichText className="post-main-content2" richText={post.fields.mainContent2}/>}
+                           
+                                 {post.fields.media && <Swiper
                                 spaceBetween={50}
                                 slidesPerView={1}
                                 height="100%"
@@ -70,19 +76,19 @@ const Board = () => {
                                 loop={true}
                             >
                             {
-                                post.media.map((photo, index )=> {
+                                post.fields.media.map((photo, index )=> {
                                 return (
                                 <SwiperSlide>
-                                    <img className="board-photo" src={"http://localhost:1337" + photo.url} key={index} alt={`gallery photo${photo}`}  />
+                                    <img className="board-photo" src={photo.fields.file.url} key={index} alt="post related"  />
                                 </SwiperSlide>
                                 )
                                 })      
                             }  
                             </Swiper> } 
-                            {console.log(post)}
+                            
                         </div>
                     )
-                }).reverse()
+                })/* .reverse() */
             }
         </div>
     )
