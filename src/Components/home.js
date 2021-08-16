@@ -39,7 +39,7 @@ const Home = () => {
                 <video id="background-video" autoPlay="autoplay" loop="loop" muted  playsInline >
                     <source src={videoHome} type="video/mp4" />    
                 </video>
-                <p className="greet">I'm Juan Pablo, video producer and web developer, I also run beatkino.com. On this site you can find a diverse selection of the work I've done through the years. I'm currently based in Berlin.  </p>
+                <p className="greet">I'm Juan Pablo, video producer and web developer, I also run beatkino.com. On this site you can find a diverse selection of my work. I'm currently based in Berlin.  </p>
             </div>
 
 
