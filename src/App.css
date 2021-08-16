@@ -22,6 +22,8 @@ footer {
   .hello {
     position: relative;
     padding-top: 2%;
+    display: flex;
+   
   }
   #background-video {
     width: 90%;
@@ -33,9 +35,10 @@ footer {
   }  
   .greet {
     position: absolute;
-    top: 33%;
+    top: 30%;
     margin: 0 7%;
     height: 100%;
+    font-size: 1.3em;
   }
 
   .post-main {
