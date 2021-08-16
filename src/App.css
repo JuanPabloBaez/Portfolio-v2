@@ -36,9 +36,9 @@ footer {
   .greet {
     position: absolute;
     top: 30%;
-    margin: 0 7%;
+    margin: 0 auto;
     height: 100%;
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 
   .post-main {
