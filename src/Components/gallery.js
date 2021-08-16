@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
@@ -44,7 +44,7 @@ const Gallery = () => {
             slidePhotos && slidePhotos.map((photo, index )=> {
               return (
               <SwiperSlide>
-                <img className="slide-photo" src={photo.default} key={index} alt={`gallery photo${photo}`} draggable={false}  />
+                <img className="slide-photo" src={photo.default} key={index} alt={`gallery ${photo}`} draggable={false}  />
               </SwiperSlide>
               )
             })      

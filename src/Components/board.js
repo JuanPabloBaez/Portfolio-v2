@@ -27,7 +27,7 @@ const Board = () => {
           }
         }; 
         getPosts();
-    },[client])
+    },[])
   
    
      

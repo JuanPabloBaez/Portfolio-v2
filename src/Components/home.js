@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import videoHome from '../images/title_2.mp4';
 import Contact from './contact-form';
 import inLogo from '../images/linkedin_icon.svg';
@@ -11,7 +11,7 @@ import './home.css';
 const Home = () => {
     const [onTop, setOntop] = useState(true);
     const bodyEndRef = useRef(null);
-    const bodyStartRef = useRef(null);
+    
 
     
 
