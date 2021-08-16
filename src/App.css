@@ -36,6 +36,7 @@ footer {
   .greet {
     position: absolute;
     top: 30%;
+    width: 85%;
     margin: 0 auto;
     height: 100%;
     font-size: 1.4em;
