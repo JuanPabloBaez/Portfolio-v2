@@ -67,7 +67,7 @@ a {
     height: 80%;
     display: block;
     width: 90%;
-    margin-top: 5%;
+    margin: 5% auto;
 }    
 
 .swiper-wraper {
@@ -85,8 +85,17 @@ a {
 }
 
 .board-player {
-    margin: 2% auto;
+    margin: 3% auto;
     width: 95%;
     max-width: 600px;
+
+}
+
+hr {
+    color: black;
+    width: 300px;
+    max-width: 35%;
+    margin: 5% auto;
+   
 
 }

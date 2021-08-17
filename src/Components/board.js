@@ -114,7 +114,8 @@ const Board = () => {
                                 })      
                             }  
                             </Swiper> } 
-                            
+
+                            <hr></hr>
                         </div>
                     )
                 })
