@@ -28,7 +28,7 @@ function App() {
           <Route path="/web">
             <Web/>
           </Route>
-          <Route path="/gallery">
+          <Route path="/image">
             <Gallery/>
           </Route>
           <Route path="/board">

@@ -10,7 +10,7 @@ const Nav = () => {
                 <Link to="/video" className="nav-button">video </Link>
                 <Link to="/web" className="nav-button">web </Link>
                 <Link to="/" className="logo"><img src={Logo} alt="logo" /></Link>
-                <Link to="/gallery" className="nav-button">gallery </Link>
+                <Link to="/image" className="nav-button">image </Link>
                 <Link to="/board" className="nav-button">board </Link>
                 
             </div>
