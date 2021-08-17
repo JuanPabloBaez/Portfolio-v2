@@ -31,7 +31,7 @@ footer {
     width: 90%;
     height: 95%;
     object-fit: cover;
-    opacity: 0.25;
+    
     border-radius: 6px;
   }  
   .greet {
@@ -39,7 +39,7 @@ footer {
     top: 30%;
     width: 85%;
     margin: 0 auto;
-    height: 100%;
+    
     font-size: 1.4em;
   }
 
