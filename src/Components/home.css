@@ -1,19 +1,18 @@
 .hello {
-    height: 75vh;
+    height: 72vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    
-  
+    background-color: darkslateblue;
+    margin-top: 3vh; 
 }
 #background-video {
     width: 95%;
     max-width: 900px;
-    object-fit: cover;
+    object-fit: cover;   
 }
-
 .greet{
     font-size: 1.8em;
     width: 95%;
@@ -22,11 +21,9 @@
     padding: 2%;
     position: absolute;
     color:black;
-    background-color: hsla(240, 100%, 99%, 0.3);
+    background-color: hsla(240, 100%, 99%, 0.6);
     border-radius: 5px;
 }
-
-
 .contact {
     background-color: black;
     color: ghostwhite;
@@ -37,7 +34,6 @@
     align-items: center;
     position: relative;
 }
-
 .contact button {
     position: absolute;
     top: 5%;
@@ -48,19 +44,15 @@
     border-radius: 6px;
     padding: 10px 20px;
     font-weight: 500;
-
 }
-
 .contact-form {
     width: 45%;
     max-width: 600px;
-    
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 form input {
     width: 90%;
