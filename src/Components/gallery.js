@@ -14,24 +14,23 @@ const photos = importAll(require.context('../images/photos', false, /,*\.jpg$/))
 
 
 const Gallery = () => {
-    const [slidePhotos, setSlidePhotos] = useState(collages);
+    const [slidePhotos, setSlidePhotos] = useState("collages");
 
     function handleGallery () {
-      if (slidePhotos===collages){
-        setSlidePhotos(photos)
+      if (slidePhotos==="collages"){
+        setSlidePhotos("photos")
         return
       } else {
-        setSlidePhotos(collages)
+        setSlidePhotos("collages")
         return
       }
     }
-   console.log(photos)
 
     return( 
         <div className="gallery-body" >
-          <button onClick={handleGallery} >{slidePhotos===collages ? "to Photography": "to Collages"}</button>
           
-          
+          <button onClick={handleGallery} >{slidePhotos==="collages" ? "to Photography": "to Collages"}</button>
+
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -41,13 +40,20 @@ const Gallery = () => {
             loop={true}
           >
           {
-            slidePhotos && slidePhotos.map((photo, index )=> {
-              return (
-              <SwiperSlide>
-                <img className="slide-photo" src={photo.default} key={index} alt={`gallery ${photo}`} draggable={false}  />
-              </SwiperSlide>
-              )
-            })      
+            slidePhotos==="collages" ? collages.map((photo, index )=> {
+                return (
+                <SwiperSlide key={index}>
+                  <img className="slide-photo" src={photo.default}  alt={`gallery ${photo}`} draggable={false}  />
+                </SwiperSlide>
+                )
+            }) :
+            photos.map((photo, index )=> {
+                return (
+                <SwiperSlide key={index}>
+                  <img className="slide-photo" src={photo.default}  alt={`gallery ${photo}`} draggable={false}  />
+                </SwiperSlide>
+                )
+            })         
           }  
           </Swiper>
 

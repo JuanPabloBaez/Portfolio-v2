@@ -4,19 +4,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     
   
 }
 #background-video {
     width: 95%;
     max-width: 900px;
+    object-fit: cover;
 }
 
 .greet{
     font-size: 1.8em;
-    max-width: 900px;
+    width: 95%;
+    max-width: 500px;
     text-align: justify;
     padding: 2%;
+    position: absolute;
+    color:black;
+    background-color: hsla(240, 100%, 99%, 0.3);
+    border-radius: 5px;
 }
 
 

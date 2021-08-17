@@ -1,17 +1,16 @@
 .board-body{
     min-height: 80vh;
-    max-height: 100vh;
-    overflow: scroll;
+    
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
 }
 
 h1 {
-    margin: 3vh 18vw;
+    margin: 5vh 15vw 3vh 0; 
     text-align: right;
-    font-weight: 400;
-    font-size: 2.6em;
+    font-weight: 200;
+    font-size: 2.7em;
 }
 
 a {
@@ -38,6 +37,7 @@ a {
 .post-main img {
     height: 30vh;
     object-fit: contain;
+    margin: 0 3%;
     
 }
 .post-main-text{
@@ -57,7 +57,7 @@ a {
 }
 
 .post-main-content{
-    margin: auto auto 5% 2%;
+    margin: auto auto 5% 0%;
 }
 .post-main-content2 {
     margin: 5% auto;

@@ -13,8 +13,6 @@ const Home = () => {
     const bodyEndRef = useRef(null);
     
 
-    
-
 
     
         const scrollToBottom = (e) => {

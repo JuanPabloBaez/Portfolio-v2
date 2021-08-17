@@ -17,10 +17,11 @@ footer {
  
 }
 
+
 @media (max-width: 550px) {
 
   .hello {
-    position: relative;
+   
     padding-top: 2%;
     display: flex;
     height: 65vh;
@@ -31,11 +32,10 @@ footer {
     height: 95%;
     object-fit: cover;
     opacity: 0.25;
-    
     border-radius: 6px;
   }  
   .greet {
-    position: absolute;
+    
     top: 30%;
     width: 85%;
     margin: 0 auto;

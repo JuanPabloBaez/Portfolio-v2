@@ -22,6 +22,7 @@
     border: 2px solid black;
     border-radius: 6px;
     padding: 6px 9px;
+    font-size: 1.3em;
 }
 .logo {
     display: flex;
