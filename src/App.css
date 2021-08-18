@@ -45,7 +45,9 @@ footer {
   .post-main {
     flex-direction: column;
   }
-
+ .gallery-body button {
+   top: 1.5%;
+ }
 
 
 }
