@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: darkslateblue;
-    margin-top: 3vh; 
+    background-color: hsl(13, 96%, 30%);
+  
 }
 #background-video {
-    width: 95%;
-    max-width: 900px;
+    height: 80%;
+    max-width: 95%;
     object-fit: cover;   
 }
 .greet{
@@ -40,7 +40,7 @@
     background: none;
     color: ghostwhite;
     font-size: 1.3em;
-    border: 1.5px solid darkslateblue;
+    border: 1.5px solid hsl(13, 96%, 30%);
     border-radius: 6px;
     padding: 10px 20px;
     font-weight: 500;

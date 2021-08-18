@@ -29,7 +29,7 @@ const Gallery = () => {
     return( 
         <div className="gallery-body" >
           
-          <button onClick={handleGallery} >{slidePhotos==="collages" ? <p><b>Collage</b> / Photography</p>: <p>Collage/ <b>Photography</b> </p>}</button>
+          <button onClick={handleGallery} >{slidePhotos==="collages" ? <p><b>Collage</b> / Photography</p>: <p>Collage / <b>Photography</b> </p>}</button>
 
           <Swiper
             spaceBetween={50}

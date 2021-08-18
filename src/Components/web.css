@@ -1,11 +1,17 @@
 .web-body {
     height: 80vh;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 10%;
     text-align: left;
+    background-color: #FFC85C;
     
 }
 .web-body p{
     margin: 4% 0;
+}
+
+.web-body a{
+    text-decoration: none;
+    color: currentColor;
 }

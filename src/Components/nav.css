@@ -1,5 +1,8 @@
 .nav-bar{
     height: 12vh;
+    
+    background: black;
+    
 }
 
 .link-panel {
@@ -12,14 +15,16 @@
     justify-content: space-around;
     align-items: flex-end;
     gap: 2%;
+    padding-bottom: 0.5%;
+    
     
 }
 
 .nav-button {
     margin-top: auto;
     text-decoration: none;
-    color: black;
-    border: 2px solid black;
+    color: ghostwhite;
+    border: 2px solid #f8f8ff;
     border-radius: 6px;
     padding: 6px 9px;
     font-size: 1.3em;
@@ -27,7 +32,9 @@
 .logo {
     display: flex;
     align-items: baseline;
-    height: 100%;
+    height: inherit;
+    color: ghostwhite;
+    padding: 1%;
 }
 .logo img{
    height: 98%;

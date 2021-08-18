@@ -5,9 +5,11 @@
     justify-content: center;
     align-items: center;
     gap: 5%;
+    background-color: #33313B;
 }
 .video-body p {
     margin: 0 auto;  
+    color: ghostwhite;
 }
 
 
