@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 const Video = () => {
     return( 
         <div className="video-body">
-            <p>The complete work is available in Beatkino.com</p>
+            <p>The complete work is available in beatkino.com</p>
         
             
     
