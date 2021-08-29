@@ -30,15 +30,14 @@
     font-size: 1.3em;
 }
 .logo {
-    display: flex;
-    align-items: baseline;
+    margin-top: auto;
     height: inherit;
     color: ghostwhite;
-    padding: 1%;
+    padding: 2% 0;
 }
 .logo img{
    height: 98%;
     object-fit: contain;
-    margin-top: auto;
+    
     
 }

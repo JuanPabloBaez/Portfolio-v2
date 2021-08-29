@@ -7,6 +7,10 @@
     gap: 5%;
     background-color: #33313B;
 }
+.video-body a {
+    color: currentColor;
+    
+}
 .video-body p {
     margin: 0 auto;  
     color: ghostwhite;

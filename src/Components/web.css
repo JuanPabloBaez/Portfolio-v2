@@ -5,9 +5,11 @@
     padding: 10%;
     text-align: left;
     background-color: #FFC85C;
+    ;
     
 }
-.web-body p{
+.web-body span{
+    display: block;
     margin: 4% 0;
 }
 

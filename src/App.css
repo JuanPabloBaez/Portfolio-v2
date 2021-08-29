@@ -4,6 +4,13 @@
  
 }
 
+a {
+  font-style: oblique;
+}
+a:hover {
+  text-decoration: line-through;
+}
+
 footer {
   height: 8vh;
   display: flex;
@@ -14,7 +21,6 @@ footer {
   flex-wrap: nowrap;
   background-color: hsla(240, 100%, 99%, 0.6);
   
- 
 }
 
 
