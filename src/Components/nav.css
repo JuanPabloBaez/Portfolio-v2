@@ -37,6 +37,7 @@
 }
 .logo img{
    height: 98%;
+   width: auto;
     object-fit: contain;
     
     

@@ -90,5 +90,6 @@ form textarea {
 }
 .social-icon {
     height: 7vh; 
-    margin: 3% 
+    margin: 3%;
+    width: auto;
 }
