@@ -20,14 +20,18 @@
     
 }
 
+.link-panel a {
+    font-style: normal;
+}
+
 .nav-button {
     margin-top: auto;
     text-decoration: none;
     color: ghostwhite;
-    border: 2px solid #f8f8ff;
     border-radius: 6px;
     padding: 6px 9px;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    
 }
 .logo {
     margin-top: auto;
