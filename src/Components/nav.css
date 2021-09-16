@@ -6,7 +6,6 @@
 }
 
 .link-panel {
-   
     display: flex;
     width: 90%;
     max-width: 600px;
@@ -16,8 +15,6 @@
     align-items: flex-end;
     gap: 2%;
     padding-bottom: 0.5%;
-    
-    
 }
 
 .link-panel a {
@@ -28,11 +25,30 @@
     margin-top: auto;
     text-decoration: none;
     color: ghostwhite;
-    border-radius: 6px;
     padding: 6px 9px;
-    font-size: 1.4em;
-    
+    font-size: 1.5em;
+    font-weight: 400;  
 }
+
+.nav-video:hover{
+    color:hsl(253, 8%, 80%);
+    text-decoration: none;
+}
+.nav-web:hover{
+    color:#FFC85C;
+    text-decoration: none;
+}
+.nav-image:hover{
+    color: #2C786C;
+    text-decoration: none;
+}
+.nav-board:hover{
+    text-decoration: none;
+}
+.nav-board:hover::after{
+    content: "!"
+}
+
 .logo {
     margin-top: auto;
     height: inherit;
