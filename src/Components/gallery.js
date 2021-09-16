@@ -34,8 +34,8 @@ const Gallery = () => {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            onSlideChange={(swiper) => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            
+           
             navigation
             loop={true}
           >
