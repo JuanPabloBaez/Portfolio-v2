@@ -16,8 +16,9 @@
 }
 .greet{
     font-size: 1.8em;
+    max-height: 550px;
     max-width: 600px;
-    padding: 5% 8%;
+    padding: 2% 5%;
     position: absolute;
     color:black;
     background-color: hsla(240, 100%, 99%, 0.9);
