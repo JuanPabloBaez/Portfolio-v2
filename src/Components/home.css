@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: hsl(13, 96%, 30%);
+    background-color: black;
+
   
 }
 #background-video {
@@ -15,15 +16,40 @@
 }
 .greet{
     font-size: 1.8em;
-    width: 95%;
-    max-width: 500px;
-    text-align: justify;
-    padding: 2%;
+    max-width: 600px;
+    padding: 5% 8%;
     position: absolute;
     color:black;
-    background-color: hsla(240, 100%, 99%, 0.6);
+    background-color: hsla(240, 100%, 99%, 0.9);
     border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    text-align: start;
+    font-weight: 300;  
 }
+
+.greet p {
+    margin: 3% 0;
+    text-align: justify;
+    line-height: 1.3em;
+}
+.greet a {
+    font-style: normal;
+}
+.greet a:hover {
+    text-decoration: none;
+}
+
+#i-video {
+    margin: 0;
+    margin-right: 2%;
+}
+#i-code{
+    margin: 0;
+    margin-right: 2%;
+    
+
+}
+
 .contact {
     background-color: black;
     color: ghostwhite;

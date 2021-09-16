@@ -37,7 +37,22 @@ const Home = () => {
                 <video id="background-video" autoPlay="autoplay" loop="loop" muted  playsInline >
                     <source src={videoHome} type="video/mp4" />    
                 </video>
-                <p className="greet">I'm Juan Pablo, video producer and web developer, I also run beatkino.com. On this site you can find a diverse selection of my work. I'm currently based in Berlin.  </p>
+                <div className="greet">
+                    <p>I'm Juan Pablo</p>
+                    <span className="greet-icons"> 
+                        <svg id="i-video" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                            <path d="M22 13 L30 8 30 24 22 19 Z M2 8 L2 24 22 24 22 8 Z" />
+                        </svg>
+                        video producer and<br/>
+                        <svg id="i-code" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">
+                            <path d="M10 9 L3 17 10 25 M22 9 L29 17 22 25 M18 7 L14 27" />
+                        </svg>
+                        web developer
+                    </span> 
+                    <p>I also run  
+                        <a href="http://beatkino.com/" target="_blank"  rel="noreferrer"> beatkino.com</a> On this site you can find a diverse selection of my work. <br/> I'm currently based in Berlin.
+                    </p>  
+                </div>
             </div>
 
 
