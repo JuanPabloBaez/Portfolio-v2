@@ -6,8 +6,6 @@
     justify-content: center;
     position: relative;
     background-color: black;
-
-  
 }
 #background-video {
     height: 80%;
@@ -67,7 +65,7 @@
     background: none;
     color: ghostwhite;
     font-size: 1.3em;
-    border: 1.5px solid hsl(13, 96%, 30%);
+    border: 1.5px solid ghostwhite;
     border-radius: 6px;
     padding: 10px 20px;
     font-weight: 500;

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico?" type="image/x-icon" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico?" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" /> 
+   
     <title>JP Baez - Portfolio</title>
     <meta
       name="description"
-      content="Portfolio Juan Pablo Baez. Web development and video production. Based in Berlin, Germany."
+      content="Portfolio Juan Pablo Baez. Web Development and Video Production. Based in Berlin, Germany."
     />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://jpbaez.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Juan Pablo Baez - Portfolio">
+    <meta property="og:description" content="Personal portfolio of Juan Pablo Baez, frontend web developer (Javascript, React) and video producer.">
+    <meta property="og:image" content="%PUBLIC_URL%/metaLogo.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://beatkino.com/">
+    <meta property="twitter:url" content="https://beatkino.com/">
+    <meta name="twitter:title" content="Juan Pablo Baez - Portfolio">
+    <meta name="twitter:description" content="Personal portfolio of Juan Pablo Baez, frontend web developer (Javascript, React) and video producer.">
+    <meta name="twitter:image" content="%PUBLIC_URL%/metaLogo.jpg">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,14 +43,13 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-SVYSF9PEGK');
       </script>
   </head>
-  
+
   <body>
     <div id="root"></div>
-   
+
     <script>
       document.addEventListener("contextmenu", function(e){
         if (e.target.nodeName === "IMG") {

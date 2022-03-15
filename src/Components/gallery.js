@@ -26,16 +26,16 @@ const Gallery = () => {
       }
     }
 
-    return( 
+    return(
         <div className="gallery-body" >
-          
+
           <button onClick={handleGallery} >{slidePhotos==="collages" ? <p><b>Collage</b> / Photography</p>: <p>Collage / <b>Photography</b> </p>}</button>
 
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            
-           
+
+
             navigation
             loop={true}
           >
@@ -53,11 +53,11 @@ const Gallery = () => {
                   <img className="slide-photo" src={photo.default}  alt={`gallery ${photo}`} draggable={false}  />
                 </SwiperSlide>
                 )
-            })         
-          }  
+            })
+          }
           </Swiper>
 
-          
+
         </div>
     )
 }
