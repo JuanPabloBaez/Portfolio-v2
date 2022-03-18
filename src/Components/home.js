@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
-import videoHome from '../images/title_2.mp4';
 
+import videoHome from '../images/title_2.mp4';
 import inLogo from '../images/iconos/linkedin.png';
 import mailLogo from '../images/iconos/email.png';
 import InstagramLogo from '../images/iconos/instagram.png';
@@ -9,9 +8,6 @@ import githubLogo from '../images/iconos/github.png'
 
 
 const Home = () => {
-
-    const bodyEndRef = useRef(null);
-    
 
     return(
         <div className="home-body"  >
