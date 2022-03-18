@@ -32,7 +32,9 @@ const Home = () => {
                     </p>  
                 </div>
                 <div className="social-icons">
-                        <a href="https://vimeo.com/jpbaez" target="_blank"  rel="noreferrer" ><img className="social-icon" src={mailLogo} alt="vimeo logo"/></a>
+                        
+                        
+                        <a href="mailto:contact@jpbaez.com" target="_blank"  rel="noreferrer" ><img className="social-icon" src={mailLogo} alt="vimeo logo"/></a>
                         <a href="https://www.linkedin.com/in/juan-pablo-baez-4b592235/" target="_blank"  rel="noreferrer" ><img className="social-icon" src={inLogo} alt="linkendin logo"/></a>
                         <a href="https://github.com/JuanPabloBaez" target="_blank"  rel="noreferrer" ><img className="social-icon" src={githubLogo} alt="github logo"/></a>
                         <a href="https://www.instagram.com/jp_baez/" target="_blank"  rel="noreferrer" ><img className="social-icon" src={InstagramLogo} alt="instagram logo"/></a>
