@@ -1,11 +1,10 @@
-import './video.css'
 import ReactPlayer from 'react-player';
 
 
 const Video = () => {
     return( 
         <div className="video-body">
-           <p>The complete work is available in  <a href="http://beatkino.com/" target="_blank"  rel="noreferrer">beatkino.com</a></p>
+           <p>The complete work is available on  <a href="http://beatkino.com/" target="_blank"  rel="noreferrer">beatkino.com</a></p>
         
             
     

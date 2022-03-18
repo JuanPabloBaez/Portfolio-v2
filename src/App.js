@@ -10,7 +10,7 @@ import Video from './Components/video.js';
 import Web from './Components/web.js';
 import Gallery from './Components/gallery.js';
 import Board from './Components/board.js';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (

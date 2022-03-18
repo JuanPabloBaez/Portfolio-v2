@@ -98,9 +98,6 @@ const Board = () => {
                                 spaceBetween={50}
                                 slidesPerView={1}
                                 height="100%"
-                                
-                                onSlideChange={(swiper) => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)}
                                 navigation
                                 loop={true}
                             >

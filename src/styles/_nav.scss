@@ -1,0 +1,49 @@
+
+.nav-bar{
+    height: 10vh;
+    background-color: black;
+}
+
+.link-panel{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: .5%;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 3%;
+    .logo{
+        height: 90%;
+        display: flex;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        color: ghostwhite;
+        font-size: 1.5em;
+        font-weight: 400;
+        img{
+            object-fit: contain;
+            height: inherit;
+        }
+    }
+}
+
+.nav-video:hover{
+    color:hsl(253, 8%, 80%);
+    
+}
+.nav-web:hover{
+    color:$colorPalette2;
+    
+}
+.nav-image:hover{
+    color: $colorPalette3;
+    
+}
+.nav-board:hover::after{
+    content: "!"
+}
+

@@ -1,0 +1,20 @@
+.video-body {
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: #33313B;
+    p {
+        margin: 0 auto;  
+        color: ghostwhite;
+    }
+    a {
+        color: currentColor;
+        font-weight: 600;  
+    }
+    a:hover{
+        text-decoration: line-through;
+    }
+}
