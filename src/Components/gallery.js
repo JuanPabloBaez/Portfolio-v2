@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import './gallery.css';
+
 
 SwiperCore.use([Navigation]);
 

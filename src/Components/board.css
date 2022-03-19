@@ -47,7 +47,7 @@ a {
 }
 .board-post-title {
     font-size: 1.6em;
-    margin: 2% 5%;
+    margin: 0 5%;
 }
 .post-main-text span {
     display: flex;

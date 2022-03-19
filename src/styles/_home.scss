@@ -1,6 +1,7 @@
 .home-body {
     height: 87vh;
     width: 100%;
+    padding: 0 2%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -14,7 +15,7 @@
 }
 #background-video{
     height: 80%;
-    max-width: 95%;
+    max-width: 100%;
     object-fit: cover;
     position: absolute; 
     z-index: 0;
@@ -22,7 +23,7 @@
 }
 .hello {
     background-color: hsla(240, 100%, 99%, 0.9);
-    width: 95%;
+    width: 98%;
     min-height: 50vh;
     max-width: 1000px;
     display: flex;
@@ -33,17 +34,22 @@
     font-family: 'Raleway', sans-serif;
     .greet {
         padding: 2%;
-        
-        p,div {
-            margin: 10px 0;
-            max-width: 30rem;
+        max-width: 33rem;
+        p{
+            margin: 2% 0;
+           
+            a{
+                font-weight: 600;
+                color: darkgray;
+            }
         }
+       
     }
     .greet-icons {
         display: flex;
         align-items: center;
         svg{
-            margin-right: 3%;
+            margin-right: 2%;
         }
     }
    
@@ -60,9 +66,9 @@
    
     a{
         margin: 0 3%;
-        
         height: 5vh;
         width: fit-content;
+        
     }
     img{
        height: inherit;

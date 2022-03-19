@@ -1,0 +1,61 @@
+.board-body{
+    min-height: 80vh;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    h1 {
+        margin: 5vh 15vw 3vh 0; 
+        text-align: right;
+        font-weight: 200;
+        font-size: 2.7em;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(103, 103, 103);
+    }
+}
+.post-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 20vh;
+    margin: 0 auto;
+    
+    width: 90%;
+    max-width: 800px;
+    text-align: justify;
+    img {
+        height: fit-content;
+        object-fit: contain;
+        margin: 0 auto;   
+        width: 100%;
+    }
+}
+.post-main {
+    
+    gap: 50px; 
+}
+.board-post-title {
+    font-size: 1.6em;
+    margin: 2% 0;
+}
+.post-main-text span {   //date and place
+    display: flex;
+    gap: 2%;
+    margin: 0 0 1% 4%;
+    
+}
+.post-main-content{
+    margin: auto auto 2% 0%;
+}
+.post-main-content2 {
+    margin: 5% auto;
+}
+
+hr {
+    color: black;
+    border-top: 1px solid black;
+    width: 50%;
+    max-width: 600px;
+    margin: 4% auto;
+}

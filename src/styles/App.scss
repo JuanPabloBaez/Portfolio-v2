@@ -5,6 +5,8 @@
 @import "./home";
 @import "./web";
 @import "./video";
+@import "./gallery";
+@import "./board";
 
 * {
     margin: 0;
@@ -15,9 +17,10 @@
   body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
-    
-    
-   
+  }
+  a{
+    text-decoration: none;
+    color: currentColor;
   }
   
   .nav-button, button {

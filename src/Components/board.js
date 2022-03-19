@@ -1,13 +1,12 @@
 import React, {useState, useEffect}  from 'react';
 import {client} from './client.js';
-
 import ReactPlayer from 'react-player';
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
-import './board.css';
+
 
 SwiperCore.use([Navigation]);
 
@@ -79,22 +78,9 @@ const Board = () => {
                                     />
                                 </div>
                             </div>
+                            {console.log(post.fields)}
 
-                            {post.fields.videoLink && <ReactPlayer url={post.fields.videoLink} className="board-player" width="100%" />}
-                           
-                            {post.fields.mainContent2 &&  <RichText 
-                                                            richText={post.fields.mainContent2}
-                                                            overrides={{
-                                                                [BLOCKS.PARAGRAPH]: {
-                                                                component: "p",
-                                                                props: {
-                                                                    className: 'post-main-content2'
-                                                                }
-                                                                }
-                                                            }}
-                            />}
-                           
-                            {post.fields.media && <Swiper
+                            {post.fields.media > 1 ? <Swiper
                                 spaceBetween={50}
                                 slidesPerView={1}
                                 height="100%"
@@ -110,7 +96,25 @@ const Board = () => {
                                 )
                                 })      
                             }  
-                            </Swiper> } 
+                            </Swiper>:
+                            post.fields.media ? 
+                            <img className="board-photo" src={post.fields.media[0].fields.file.url}  alt="post related"  />:
+                            null
+} 
+                           
+                            {post.fields.mainContent2 ?  <RichText 
+                                                            richText={post.fields.mainContent2}
+                                                            overrides={{
+                                                                [BLOCKS.PARAGRAPH]: {
+                                                                component: "p",
+                                                                props: {
+                                                                    className: 'post-main-content2'
+                                                                }
+                                                                }
+                                                            }}
+                                                          /> : null}
+                            {post.fields.videoLink && <ReactPlayer url={post.fields.videoLink} className="board-player" width="100%" />}
+                            
 
                             <hr></hr>
                         </div>
