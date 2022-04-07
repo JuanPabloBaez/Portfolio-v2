@@ -78,7 +78,7 @@ const Board = () => {
                                     />
                                 </div>
                             </div>
-                            {console.log(post.fields)}
+                            
 
                             {post.fields.media > 1 ? <Swiper
                                 spaceBetween={50}
