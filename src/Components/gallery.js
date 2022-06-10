@@ -1,65 +1,69 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.css';
-
-
 SwiperCore.use([Navigation]);
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-const collages = importAll(require.context('../images/collage', false, /,*\.jpg$/));
-const photos = importAll(require.context('../images/photos', false, /,*\.jpg$/));
 
+const Gallery = ({gallery}) => {
+  const [slidePhotos, setSlidePhotos] = useState("collages");
+  const [collages,setCollages] = useState([]);
+  const [photos, setPhotos] = useState([]);
 
-const Gallery = () => {
-    const [slidePhotos, setSlidePhotos] = useState("collages");
-
-    function handleGallery () {
-      if (slidePhotos==="collages"){
-        setSlidePhotos("photos")
-        return
-      } else {
-        setSlidePhotos("collages")
-        return
-      }
+  function handleGallery () {
+    if (slidePhotos==="collages"){
+      setSlidePhotos("photos")
+      return
+    } else {
+      setSlidePhotos("collages")
+      return
     }
+  }
 
-    return(
-        <div className="gallery-body" >
-
-          <button onClick={handleGallery} >{slidePhotos==="collages" ? <p><b>Collage</b> / Photography</p>: <p>Collage / <b>Photography</b> </p>}</button>
-
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-
-
-            navigation
-            loop={true}
-          >
-          {
-            slidePhotos==="collages" ? collages.map((photo, index )=> {
-                return (
-                <SwiperSlide key={index}>
-                  <img className="slide-photo" src={photo.default}  alt={`gallery ${photo}`} draggable={false}  />
-                </SwiperSlide>
-                )
-            }) :
-            photos.map((photo, index )=> {
-                return (
-                <SwiperSlide key={index}>
-                  <img className="slide-photo" src={photo.default}  alt={`gallery ${photo}`} draggable={false}  />
-                </SwiperSlide>
-                )
-            })
-          }
-          </Swiper>
+  useEffect(()=>{
+    function getGallery () {
+      gallery.map( (item)=>{
+        if (item.fields.title==="collage"){
+          return  setCollages(item.fields.images.map(item=>item.fields.file.url))
+        } else if (item.fields.title==="photos"){
+          return setPhotos(item.fields.images.map(item=>item.fields.file.url))
+        }
+      });
+    };
+    getGallery();
+  },[gallery]);
 
 
-        </div>
-    )
+  return(
+    <div className="gallery-body" >
+      <button onClick={handleGallery} >{slidePhotos==="collages" ? <p><b>Collage</b> / Photography</p>: <p>Collage / <b>Photography</b> </p>}</button>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        loop={true}
+      >
+      { 
+        slidePhotos==="collages" ? collages.map((item,index)=> {
+          return (
+            <SwiperSlide key={index}>
+              <img className="slide-photo" src={item}  alt={`gallery ${item}`} draggable={false}  />
+            </SwiperSlide>
+            )
+        }): null
+        }
+        {
+          slidePhotos==="photos" ? photos.map((item,index)=> {
+            return (
+              <SwiperSlide key={index}>
+                <img className="slide-photo" src={item}  alt={`gallery ${item}`} draggable={false}  />
+              </SwiperSlide>
+              )
+          }): null
+        }
+      </Swiper>
+    </div>
+  )
 }
 
 export default Gallery;

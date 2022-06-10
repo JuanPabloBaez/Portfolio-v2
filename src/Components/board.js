@@ -1,35 +1,15 @@
-import React, {useState, useEffect}  from 'react';
-import {client} from './client.js';
+import React from 'react';
 import ReactPlayer from 'react-player';
 import RichText from '@madebyconnor/rich-text-to-jsx';
 import { BLOCKS } from '@contentful/rich-text-types';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 
 
 SwiperCore.use([Navigation]);
 
-const Board = () => {
-    const [posts, setPosts] = useState([]);
+const Board = ({posts}) => {
     
-    useEffect(()=>{
-       async function  getPosts () {
-        try{
-            client.getEntries()
-            .then((response)=> {
-                setPosts(response.items);
-                return
-            })
-          }catch(error){
-            console.log('fatal error')
-          }
-        }; 
-        getPosts();
-    },[])
-  
-   
-     
       
     return( 
         <div className="board-body">
