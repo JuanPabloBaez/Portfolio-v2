@@ -1,7 +1,6 @@
 .home-body {
     height: 87vh;
     width: 100%;
-    padding: 0 2%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,23 +8,18 @@
     align-items: center;
     background-color: black;
     z-index: 0;
-    div {
-        z-index: 5;
-    }
+    
 }
 #background-video{
-    height: 80%;
-    max-width: 100%;
-    object-fit: cover;
-    position: absolute; 
-    z-index: 0;
-  
+    height: inherit;
+    width: auto;
+    position: absolute;
+    z-index: -5;
 }
 .hello {
-    background-color: hsla(240, 100%, 99%, 0.9);
-    width: 98%;
-    min-height: 50vh;
-    max-width: 1000px;
+    height: 75vh;
+    max-width: 98%;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -33,15 +27,24 @@
     font-size: 1.4rem;
     font-family: 'Raleway', sans-serif;
     .greet {
-        padding: 2%;
-        max-width: 33rem;
+        width: 92%;
+        height: 92%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(240, 100%, 99%, 0.9);
+        gap: 4%;
+        .hi{
+            width: fit-content;
+        }
+        a{
+            font-weight: 600;
+            color: darkgray;
+        }
         p{
             margin: 2% 0;
-           
-            a{
-                font-weight: 600;
-                color: darkgray;
-            }
+            max-width: 30rem; 
         }
        
     }
