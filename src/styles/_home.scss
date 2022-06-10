@@ -12,14 +12,14 @@
 }
 #background-video{
     height: inherit;
-    width: inherit;
+    width: 100%;
     object-fit: cover;
     position: absolute;
     z-index: -5;
 }
 .hello {
-    height: 75vh;
     aspect-ratio: 1 / 1;
+    height: 75vh;
     max-width: 98%;
     display: flex;
     flex-direction: column;
