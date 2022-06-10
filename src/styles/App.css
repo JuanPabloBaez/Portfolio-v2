@@ -82,7 +82,8 @@
 
 #background-video {
   height: inherit;
-  width: 100%;
+  width: inherit;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
