@@ -12,13 +12,13 @@
 }
 #background-video{
     height: inherit;
-    width: auto;
+    width: inherit;
+    object-fit: cover;
     position: absolute;
     z-index: -5;
 }
 .hello {
     height: 75vh;
-    
     aspect-ratio: 1 / 1;
     max-width: 98%;
     display: flex;
@@ -46,16 +46,12 @@
         p{
             margin: 3% 0 1.5% 2%;
             max-width: 30rem; 
-            line-height: 1.9rem;
-            
+            line-height: 1.9rem; 
         }
-       
     }
     .greet-icons {
         display: flex;
         align-items: center;
-        
-       
         svg{
             margin: .5%;
         }

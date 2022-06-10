@@ -82,7 +82,9 @@
 
 #background-video {
   height: inherit;
-  width: auto;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   z-index: -5;
 }
