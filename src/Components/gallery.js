@@ -23,11 +23,11 @@ const Gallery = ({gallery}) => {
   useEffect(()=>{
     function getGallery () {
       gallery.map( (item)=>{
-        if (item.fields.title==="collage"){
-          return  setCollages(item.fields.images.map(item=>item.fields.file.url))
-        } else if (item.fields.title==="photos"){
-          return setPhotos(item.fields.images.map(item=>item.fields.file.url))
-        }
+         if (item.fields.title==="collage"){
+            return  setCollages(item.fields.images.map(item=>item.fields.file.url))
+          } else if (item.fields.title==="photos"){
+            return setPhotos(item.fields.images.map(item=>item.fields.file.url))
+          } else return null
       });
     };
     getGallery();
