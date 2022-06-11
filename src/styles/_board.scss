@@ -20,36 +20,57 @@
     height: fit-content;
     min-height: 20vh;
     margin: 0 auto;
-    
     width: 90%;
     max-width: 800px;
-    text-align: justify;
-    img {
-        height: fit-content;
-        object-fit: contain;
-        margin: 0 auto;   
-        width: 100%;
+    h2 {
+        font-size: 1.6em;
+        margin: 1%;
+      
+    }
+    span {   //date and place
+        display: flex;
+        gap: 2%;
+        margin: 0 0 1% 2%;
+        font-size: .9rem;
     }
 }
-.post-main {
-    
-    gap: 50px; 
-}
-.board-post-title {
-    font-size: 1.6em;
-    margin: 2% 0;
-}
-.post-main-text span {   //date and place
+
+.post-main-text{
     display: flex;
-    gap: 2%;
-    margin: 0 0 1% 4%;
-    
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+   
+    .main-photo{
+        float: none;
+        max-height: 35vh;
+        max-width: 90%;
+        object-fit: contain;
+        
+    }
 }
+
+
 .post-main-content{
-    margin: auto auto 2% 0%;
+    margin: auto auto 1% 0%;
+    text-align: justify;
 }
 .post-main-content2 {
-    margin: 5% auto;
+    margin: 1% auto;
+    text-align: justify;
+}
+.swiper-container{
+    margin: 3% auto;
+}
+.board-photo{
+    max-height: 35vh;
+    object-fit: contain;
+    margin: 3% 0;
+}
+.board-player{
+    margin: 3% auto;
+    width: 95%;
+    max-width: 600px;
 }
 
 hr {
@@ -58,4 +79,16 @@ hr {
     width: 50%;
     max-width: 600px;
     margin: 4% auto;
+}
+
+@media (min-width: 600px) {
+    .post-main-text{
+        display: block;
+        
+    }
+    .main-photo {
+        float: left !important;
+        margin-right: 2%;
+       
+    }
 }
